@@ -12,12 +12,12 @@ Scott Lucas, Gary White, Samuel Labastille, and Michelle Un
 
 - **MVP Features**
   - Users
-    - [ ] Users can create account
-    - [ ] Users can login
-    - [ ] Users can update their bio
-    - [ ] Users can manage the communities they belong to and the artifacts they’ve submitted
-    - [ ] Users can select communities to join
-    - [ ] Users can belong to two types: general, admin
+    - [x] Users can create account
+    - [x] Users can login
+    - [x] Users can update their bio
+    - [x] Users can manage the communities they belong to and the artifacts they’ve submitted
+    - [x] Users can select communities to join
+    - [x] Users can belong to two types: general, admin
   - Community
     - [x] Users can create a new community
     - [ ] Users can invite other users to join the community

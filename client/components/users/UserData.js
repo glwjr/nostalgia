@@ -63,7 +63,7 @@ const useStyles = makeStyles({
 
 const UserData = ({ user, id }) => {
   const classes = useStyles();
-  const { auth } = useSelector(state => state);
+  const auth = useSelector(state => state.auth);
   const [open, setOpen] = useState(false);
 
   const displayFriends = () => {

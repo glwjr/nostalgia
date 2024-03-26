@@ -2,8 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import {
   createTheme,
-  ThemeProvider,
-  makeStyles,
+  ThemeProvider
 } from '@material-ui/core';
 import Routes from './Routes';
 import Layout from './Layout';
@@ -41,7 +40,7 @@ const theme = createTheme({
 });
 
 const App = () => {
-  const { auth } = useSelector(state => state);
+  const auth = useSelector(state => state.auth);
 
   return (
     <ThemeProvider theme={theme}>

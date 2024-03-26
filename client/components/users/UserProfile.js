@@ -52,13 +52,13 @@ const useStyles = makeStyles({
 
 const UserProfile = () => {
   const classes = useStyles();
-  const { auth, friends } = useSelector(state => state);
+  const auth = useSelector(state => state.auth);
+  const user = useSelector(state => state.user);
+  const communities = useSelector(state => state.communities);
+  const artifacts = useSelector(state => state.artifacts);
+  const userCommunity = useSelector(state => state.userCommunity);
   const { id } = useParams();
   const dispatch = useDispatch();
-
-  const { user, communities, artifacts, userCommunity } = useSelector(
-    state => state
-  );
 
   useEffect(() => {
     dispatch(fetchUser(id));
@@ -69,7 +69,7 @@ const UserProfile = () => {
   useEffect(() => {
     dispatch(setUserArtifacts(id));
   }, []);
-  
+
   const currentUser = user.user;
   const userArtifacts = artifacts.user_artifacts;
 
@@ -77,9 +77,9 @@ const UserProfile = () => {
     <>
       <Grid>
         {auth.id === id &&
-        !currentUser.age &&
-        !currentUser.location &&
-        !currentUser.bio ? (
+          !currentUser.age &&
+          !currentUser.location &&
+          !currentUser.bio ? (
           <DialogBox user={user} />
         ) : (
           <span></span>
